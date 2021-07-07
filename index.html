@@ -22,11 +22,11 @@
                        </div>
                        <div class="col-md-5 center-item">
                           <div class="input-group number-spinner">
-                             <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                             <input type="text" class="form-control text-center" value="1">
-                             <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                             <button onclick="PriceCalculate('Quantity', 'Price', 1219, false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                             <input id="Quantity" type="text" class="form-control text-center" value="1">
+                             <button onclick="PriceCalculate('Quantity', 'Price', 1219, true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                           </div>
-                          <h5>$1219</h5>
+                          <h5>$<span id="Price">1219</span></h5>
                           <img src="images/remove.png" alt="" class="remove-item">
                        </div>
                     </div>
@@ -39,11 +39,11 @@
                        </div>
                        <div class="col-md-5 center-item">
                           <div class="input-group number-spinner">
-                             <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                             <input type="text" class="form-control text-center" value="1">
-                             <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                             <button onclick="PriceCalculate('CaseNumber', 'CasePrice', 59, false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                             <input id="CaseNumber" type="text" class="form-control text-center" value="1">
+                             <button onclick="PriceCalculate('CaseNumber', 'CasePrice', 59, true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                           </div>
-                          <h5>$59</h5>
+                          <h5>$<span id="CasePrice">59</span></h5>
                           <img src="images/remove.png" alt="" class="remove-item">
                        </div>
                     </div>
@@ -56,9 +56,9 @@
                           <h5>Total:</h5>
                        </div>
                        <div class="col-md-4 status">
-                          <h5>$1,278</h5>
-                          <h5>$0</h5>
-                          <h5>$1,278</h5>
+                          <h5 id="totalPrice">$0</h5>
+                          <h5 id="tax">$0</h5>
+                          <h5 id="inTotalBill">$0</h5>
                        </div>
                     </div>
                  </div>
@@ -69,5 +69,7 @@
            </div>
         </div>
      </section>
+
+     <script src="./main.js"></script>
 </body>
 </html>

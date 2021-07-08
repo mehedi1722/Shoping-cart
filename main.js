@@ -30,3 +30,28 @@ function TotalPriceCount() {
     document.getElementById('inTotalBill').innerHTML = "$" + inTotalBill;
     
 }
+
+var remove = document.getElementsByClassName("remove-item");
+for (let i = 0; i < remove.length; i++) {
+    const btn = remove[i];
+    btn.addEventListener('click', function (e) {
+        var x = e.target.parentNode;
+        var y = x.parentNode.parentNode
+        y.style.display = "none";
+    })
+    
+}
+
+
+document.getElementById('OrderBtn').addEventListener('click', function () {
+    document.querySelector('.container').style.display = 'none';
+    document.querySelector('#Order_page').style.display = 'block';
+    
+})
+
+
+
+
+
+
+
